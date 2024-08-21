@@ -1,0 +1,342 @@
+body{
+  background-color: rgb(22, 19, 19);
+  display: flex;
+  justify-content: center;
+}
+header{
+ 
+  width: 95%;
+  height: 50%;
+  flex-wrap:nowrap;
+  display: flex; /* تحديد flexbox للحاوية */
+  justify-content: center;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+ 
+
+}
+#myHeader{
+  z-index: 99999;
+  position: relative;
+}
+
+header .logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 0;
+  width: 100px;
+  height: auto;
+ border-radius: 50%;
+ border-color: #000000; /* تغيير لون الحدود عند التحويم */
+ box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* إضافة تأثير الإضاءة */
+
+
+  }
+  header #logo {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+  }
+  header.sticky #logo {
+    top: 0;
+    transform: scale(0.8);
+    opacity: 0;
+    transition-delay: 0.5s;
+  }
+.t2{
+ 
+ 
+
+  position: absolute; /* تحديد موقع العنصر بشكل مطلق */
+  top: 10%; /* تحريك العنصر إلى منتصف الصفحة عموديًا */
+  
+    
+   
+  flex-wrap:nowrap;
+}
+
+/* إعدادات النص وتأثير الكتابة */
+.text_animation {
+
+
+  justify-content: center;
+  display: flex; /* تحديد flexbox للحاوية */
+  justify-content: center;
+  flex-wrap:nowrap;
+ 
+  width: 120%;
+
+
+   
+margin: 30%;
+}
+
+
+.text {
+ 
+ color: #ffffff;
+  overflow: hidden; /* يخفي النص الزائد خارج الحاوية */
+  font-size: 3.6rem;
+  font-weight: 700;
+  border-right: 0.15em solid rgb(218, 11, 11); /* يظهر الخط اللامع على يمين النص */
+  white-space: nowrap; /* يمنع النص من الانتقال إلى سطر جديد */
+  animation: typing 5s steps(200, end) 1s infinite alternate, blink 0.75s step-end infinite; /* تأثير الكتابة وتكرارها */
+  flex-wrap:nowrap;
+  text-shadow:
+  #ec1313 0 0 12px,
+  #442b2b 0 0 25px,
+  #000000 0 0 25px,
+  #fa0404 0 0 25px;
+}
+
+/* تحريك الكتابة */
+@keyframes typing {
+  0% { 
+      width: 0; /* يبدأ العرض من الصفر */
+  }
+  50% {
+      width: 100%; /* ينمو العرض تدريجيًا ليصل إلى 100% من طول النص */
+  }
+  100% {
+      width: 0; /* يعود العرض إلى الصفر */
+  }
+}
+
+/* تأثير وميض الخط اللامع */
+@keyframes blink {
+  from, to { 
+      border-color: transparent; /* يجعل الخط شفافًا */
+  }
+  50% { 
+      border-color: rgb(199, 131, 4); /* يعيد اللون البرتقالي عند 50% من الوقت */
+  }
+}
+
+
+
+.bar{
+ 
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 100vh;
+  height: 100px;
+
+  flex-wrap:nowrap;
+}
+
+.navbar{
+
+  display: inline-flex;
+  background-color: #cc2f2f;
+  position: absolute;
+  top: 10%;
+  left: -70%;
+  gap: 20px;
+  list-style-type: none; /* لإزالة النقاط أو الأرقام */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* محاذاة النص في الوسط */
+
+
+background: linear-gradient(135deg,
+rgba(255,255,255,0.05),rgba(255,255,255,0));
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(1px);
+box-shadow: 0 10px 24px rgba(255, 255, 255, 0.5);
+flex-wrap:nowrap;
+
+
+  border-radius: 50px;
+   padding: 25px; /* مسافة حول المحتوى */
+   flex-wrap:nowrap;
+}
+
+
+.navbar  li{
+
+  padding: 1px; /* إضافة بعض التباعد الداخلي */
+  border-radius: 20px;
+ 
+
+  background-color: #721f1f;
+  color: #979595;
+  display: inline-block;
+  /*padding: 10px; /* مسافة حول المحتوى */
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 17px;
+  width: 100px;
+  height: 40px;
+  transition: 0.9s;
+  font-size: 24px;
+  color: #ddce8b;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* إضافة ظل خفيف */
+  /* text-transform: uppercase;/* تحويل النص إلى أحرف كبيرة */
+
+
+  cursor: pointer; /* تغيير شكل المؤشر إلى شكل اليد */
+   border: 1px solid #ccc; /* إطار افتراضي */
+  padding: 10px 10px; /* تباعد داخلي */
+  font-size: 25px; /* حجم الخط */
+  flex-wrap:nowrap;
+}
+
+
+li:hover{
+  background-color: rgb(109, 105, 45); /* لون خلفية عند التمرير */
+  border-color: #aaa; /* تغيير لون الإطار عند التمرير */
+
+
+}
+.bar_text button{
+
+  all: unset;
+
+}
+
+
+
+/*==========================================img*/
+.page {
+ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  position: absolute;
+  left: 0%;
+}
+
+.c {
+ 
+  display: block;
+  align-items: center;
+  height: 10%;
+  margin: 0% 0%;
+  padding: 0% 7%;
+  gap: 20px;
+}
+
+.i_d {
+  gap: 90px; /* المسافة بين الصور */
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  display: flex;
+  place-items: center;
+  width: 550px; /* تعديل العرض */
+  height: 370px; /* تعديل الارتفاع */
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.c1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  width: 92%;
+  height: 90%;
+  
+}
+
+.c1:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.c1 .c1_1 {
+  width: 100%; /* ضبط عرض الصورة داخل الحاوية */
+  height: 100%; /* ضبط ارتفاع الصورة داخل الحاوية */
+  border-radius: inherit;
+}
+
+.c1 .c1_1 img {
+  width: 100%; /* ضبط عرض الصورة */
+  height: 100%; /* ضبط ارتفاع الصورة */
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+  border-color: #772222; /* تغيير لون الحدود عند التحويم */
+  box-shadow: 0 0 10px rgba(243, 233, 233, 0.8); /* إضافة تأثير الإضاءة */
+
+}
+
+.c1:hover img {
+  filter: grayscale(0) brightness(0.3);
+
+}
+
+.c1_2 {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.c1:hover .c1_2 {
+  opacity: 1;
+  color: #ffffff;
+}
+
+
+#logo, .text_animation, #img_p {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}

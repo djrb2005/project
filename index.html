@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Sticky Navigation with Glass Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+    <header id="myHeader" class="">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714.6 401.1">
+       <path fill="#fff" fill-riule="evenodd" d="M502.8 0h211.8l-23 39.7-138.5 240L483 401H342.7L413 279.6 251.4 0h140.3L483 158.1 538.6 62 502.8 0Zm-201 279.6L140.1 0H0l231.7 401 70-121.4Z"/>
+   </svg> 
+     
+   
+   </header>
+   
+        <header>
+        <img class="logo" id="img_p"
+            src='data:image/jpeg;base64,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'
+            alt="وصف الصورة">
+        <div class="text_animation">
+           
+            <div class="t2">
+                <p class="text">site university</p>
+
+            </div>
+        </div>
+    </header>
+                <div class="bar">
+                    <ul class="navbar">
+                        <li class="bar_text" onclick="openPage('home')">
+                            <button id="openmenu">page1</button>
+
+                        </li>
+                        <li class="bar_text" onclick="openPage('vision')">
+                            <button>page2</button>
+
+                        </li>
+                        <li class="bar_text" onclick="openPage('knowledge')">
+
+                            <button>page3</button>
+                        </li>
+                        <li class="bar_text" onclick="openPage('space')">
+                            <button>page4</button>
+                        </li>
+                        <li class="bar_text" onclick="openPage('future')">
+                            <button>page5</button>
+                        </li>
+                    </ul>
+                </div>
+         
+            <div id="home" class="page" style="display: block;">
+              
+                <div class="c">
+                    <div class="i_d">
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5871765114984707420.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5871917676518028608.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="i_d">
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5874135528910206210.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5874135528910206210.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="i_d">
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5871765114984707420.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5871917676518028608.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="i_d">
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5874135528910206210.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="c1">
+                            <div class="c1_1">
+                                <img src='5874135528910206210.jpg' alt="وصف الصورة">
+                            </div>
+                            <div class="c1_2">
+                                <p>
+                                    It sounds like you're working on a group university project. Here are some tips and
+                                    guidelines to help ensure your project runs smoothly:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                <div id="vision" class="page" style="display: none;">
+                    <!-- محتوى صفحة الرؤية -->
+                    <h1>Welcome to Page 2 (Vision)</h1>
+                </div>
+
+                <div id="knowledge" class="page" style="display: none;">
+                    <!-- محتوى صفحة المعرفة -->
+                    <h1>Welcome to Page 3 (Knowledge)</h1>
+                </div>
+
+                <div id="space" class="page" style="display: none;">
+                    <!-- محتوى صفحة الفضاء -->
+                    <h1>Welcome to Page 4 (Space)</h1>
+                </div>
+
+                <div id="future" class="page" style="display: none;">
+                    <!-- محتوى صفحة المستقبل -->
+                    <h1>Welcome to Page 5 (Future)</h1>
+                </div>
+
+
+                <button id="backToTop" class="back-to-top">↑</button>
+
+                <script src="./script.js"></script>
+
+
+</body>
+</html>
